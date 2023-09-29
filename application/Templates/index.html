@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to VCC.</h1>
+
+            {% if session['username'] %}
+                <h3>Let's get started.</h3>
+            {% else %}
+                <p>Already registered? <a href="{{url_for('login') }}">Login</a></p>
+            {% endif %}
+
+            <div style="text-align:left;">
+                <h2>Are you eager to enhance your knowledge and skills?</h2> 
+                
+                <p>  VietCanConnect.ca - a thriving community designed to empower and educate individuals like you through a diverse range of courses and resources.                 At VietCanConnect, our mission is to create a supportive and inclusive learning environment where you can explore your passions, develop new skills, and connect with like-minded individuals. Whether you're interested in language acquisition, professional development, cultural enrichment, or simply expanding your horizons, we have something for everyone.
+                     </p>
+
+                <p> Unlock your potential with VietCanConnect – Where Learning Meets Community.</p> 
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
